@@ -1,6 +1,6 @@
 - name: my 1st playbook
-  host: all
+  hosts: all
   tasks:
-   - name: 1st task 
-     debug:
-       msg: "hello this is my 1st playbook"
+    - name: 1st task 
+      debug:
+        msg: "hello this is my 1st playbook"
