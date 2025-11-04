@@ -19,3 +19,9 @@
         msg: "Hello this is {{movie}}"  
       vars:
         movie: "Superman"   
+    - name: get hostname
+      shell: hostname
+      register: URL
+    - name: print hostname
+      debug:
+        msg: "this is {{URL}}"
