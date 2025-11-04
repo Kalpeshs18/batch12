@@ -1,6 +1,11 @@
 - name: my 1st playbook
   hosts: all
+  vars:
+    movie: "spiderman"
   tasks:
     - name: 1st task 
       debug:
-        msg: "hello this is my 1st playbook"
+        msg: "hello this is ${{movie}} -2"
+    - name: 2st task 
+      debug:
+        msg: "hello this is ${{movie}} "    
