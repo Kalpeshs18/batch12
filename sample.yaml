@@ -9,3 +9,8 @@
     - name: 2st task 
       debug:
         msg: "hello this is {{movie}} "    
+    - name: 3st task 
+      debug:
+        msg: "hello this is {{movie}}-1 "  
+        vars:
+        movie : "Superman"   
