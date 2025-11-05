@@ -1,6 +1,7 @@
 # yum and apt modules
 # conditions
 #privilages (root level permission)
+# package install 
 
 - name: installation file
   hosts: all
@@ -18,4 +19,10 @@
        name: httpd
        state: present
       when: ansible_os_family == "Redhat"
+
+    - name: install httpd
+      package:
+       name: ngnix
+       state: present
+      when: ansible_os_family == "Redhat"  
              
