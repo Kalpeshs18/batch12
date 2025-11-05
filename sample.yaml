@@ -25,3 +25,7 @@
     - name: print hostname
       debug:
         msg: "this is {{URL.stdout}}"
+
+    - name: Gathering facts
+      debug:
+        msg: "hello this is {{ansible_os_family}} "    
