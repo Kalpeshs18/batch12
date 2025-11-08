@@ -9,11 +9,17 @@
         - banana
         - cherry  
 
+    
+- name: Install packages using loop
+  hosts: all
+  become: yes
+  tasks:
     - name: loop check 2
-      package:
-        name: "{{item}}"
-        state: latest
+      apt:
+        name: "{{ item }}"
+        state: present
       loop:
         - vim
-        - echo
-        - weget    
+        - wget
+        - curl
+   
