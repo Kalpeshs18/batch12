@@ -26,3 +26,17 @@
        state: present
       when: ansible_os_family == "Debian"  
              
+    - name: install httpd
+      systemd:
+      
+       name: nginx
+       state: started
+       enabled: true  
+       
+    - name: print list
+      debug:
+        msg: "{{item}}"
+      loop:
+        - apple
+        - banana
+        - cherry      

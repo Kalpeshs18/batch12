@@ -1,0 +1,10 @@
+- name: loop installation
+  hosts: all
+  tasks:
+    - name: print list
+      debug:
+        msg: "{{item}}"
+      loop:
+        - apple
+        - banana
+        - cherry  
