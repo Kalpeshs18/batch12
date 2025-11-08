@@ -26,13 +26,13 @@
        state: present
       when: ansible_os_family == "Debian"  
              
-    - name: install httpd
-      systemd:
-      
-       name: nginx
-       state: started
-       enabled: true  
-       
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+        enabled: true  
+      ignore_errors: true
+
     - name: print list
       debug:
         msg: "{{item}}"
