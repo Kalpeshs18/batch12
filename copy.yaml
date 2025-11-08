@@ -1,5 +1,6 @@
 - name: my copy sever
   hosts: all
+  become: true
   tasks:
     - name: install apache2
       apt:
