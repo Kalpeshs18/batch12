@@ -5,4 +5,5 @@
 - name: restart service
   systemd:
       name: "{{pkg}}"
-      state: restarted
+      state: started
+      enabled: yes
